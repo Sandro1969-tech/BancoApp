@@ -1,0 +1,13 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Cliente_1 = require("./Cliente");
+const Conta_1 = require("./Conta");
+const Banco_1 = require("./Banco");
+const banco = new Banco_1.Banco();
+const cliente1 = new Cliente_1.Cliente("Sandro", "123.456.789-00");
+const conta1 = new Conta_1.Conta("001", cliente1);
+banco.adicionarConta(conta1);
+conta1.depositar(500);
+conta1.consultarSaldo();
+conta1.sacar(200);
+conta1.consultarSaldo();
